@@ -13,6 +13,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+
+      - uses: git-actions/set-user@v1
 
       - name: Generate version number
         id: version
@@ -43,11 +47,6 @@ jobs:
       - name: Create a ZIP archive of the repository
         run: |
           zip -r "${{ env.repo }}.zip" . -x "*.git*"
-
-      - name: Configure Git user
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Create Git tag
         run: |
