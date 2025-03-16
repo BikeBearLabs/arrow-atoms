@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "aa/as-image",
+	"title": "Arrow Atoms: As Image",
+	"category": "common",
+	"description": "Renders a field from the current query loop, as an image.",
+	"attributes": {
+		"of": {
+			"type": "string"
+		},
+		"injection": {
+			"type": "object",
+			"default": { "value": null }
+		}
+	},
+	"usesContext": ["aa/context/extra", "aa/foreach/of", "pattern/overrides"],
+	"supports": {
+		"html": true
+	},
+	"textdomain": "aa",
+	"editorScript": [
+		"aa/api/editor",
+		"file:../../lib/editor/block/ArrowAtomBlock.js",
+		"file:./index.js"
+	]
+}

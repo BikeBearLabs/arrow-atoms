@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "aa/as-block",
+	"title": "Arrow Atoms: As Block",
+	"category": "common",
+	"description": "Applies content from a field from the current query loop, as attributes into a block.",
+	"attributes": {
+		"of": {
+			"type": "string"
+		},
+		"props": {
+			"type": "object",
+			"default": {}
+		},
+		"content": {
+			"type": "string",
+			"source": "html"
+		},
+		"injection": {
+			"type": "object",
+			"default": { "value": null }
+		}
+	},
+	"providesContext": {
+		"aa/as-block/of": "of"
+	},
+	"usesContext": ["aa/context/extra", "aa/foreach/of", "pattern/overrides"],
+	"supports": {
+		"html": true
+	},
+	"textdomain": "aa",
+	"editorScript": [
+		"aa/api/editor",
+		"file:../../lib/editor/block/ArrowAtomBlock.js",
+		"file:./index.js"
+	]
+}

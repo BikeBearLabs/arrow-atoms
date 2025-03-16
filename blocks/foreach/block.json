@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "aa/foreach",
+	"title": "Arrow Atoms: Foreach",
+	"category": "common",
+	"description": "Maps through a repeater field with the provided template.",
+	"attributes": {
+		"of": {
+			"type": "string"
+		},
+		"content": {
+			"type": "string",
+			"source": "raw"
+		}
+	},
+	"providesContext": {
+		"aa/foreach/of": "of"
+	},
+	"usesContext": ["pattern/overrides", "aa/foreach/of"],
+	"supports": {
+		"html": true
+	},
+	"textdomain": "aa",
+	"editorScript": [
+		"aa/api/editor",
+		"file:../../lib/editor/block/ArrowAtomBlock.js",
+		"file:./index.js"
+	]
+}

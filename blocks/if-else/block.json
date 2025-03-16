@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "aa/if-else",
+	"title": "Arrow Atoms: If: Else",
+	"category": "common",
+	"description": "Renders the children if the condition is falsy.",
+	"attributes": {
+		"content": {
+			"type": "string",
+			"source": "raw"
+		},
+		"injection": {
+			"type": "object",
+			"default": { "value": null }
+		}
+	},
+	"usesContext": [
+		"aa/if/of",
+		"aa/if/injection",
+		"aa/foreach/of",
+		"pattern/overrides"
+	],
+	"supports": {
+		"html": true
+	},
+	"textdomain": "aa",
+	"editorScript": [
+		"aa/api/editor",
+		"file:../../lib/editor/block/ArrowAtomBlock.js",
+		"file:./index.js"
+	]
+}

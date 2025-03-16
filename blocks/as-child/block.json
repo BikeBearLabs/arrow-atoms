@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "aa/as-child",
+	"title": "Arrow Atoms: As Child",
+	"category": "common",
+	"description": "Applies content from a field from the current query loop, as attributes to the first child.",
+	"attributes": {
+		"of": {
+			"type": "string"
+		},
+		"at": {
+			"type": "string"
+		},
+		"op": {
+			"type": "string",
+			"enum": ["replace", "append", "prepend"],
+			"default": "replace"
+		},
+		"content": {
+			"type": "string",
+			"source": "raw"
+		},
+		"injection": {
+			"type": "object",
+			"default": { "value": null }
+		}
+	},
+	"usesContext": ["aa/context/extra", "aa/foreach/of", "pattern/overrides"],
+	"supports": {
+		"html": true
+	},
+	"textdomain": "aa",
+	"editorScript": [
+		"aa/api/editor",
+		"file:../../lib/editor/block/ArrowAtomBlock.js",
+		"file:./index.js"
+	]
+}

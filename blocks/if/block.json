@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "aa/if",
+	"title": "Arrow Atoms: If",
+	"category": "common",
+	"description": "Renders the children if the condition is truthy.",
+	"attributes": {
+		"of": {
+			"type": "string"
+		},
+		"injection": {
+			"type": "object",
+			"default": { "value": null }
+		},
+		"content": {
+			"type": "string",
+			"source": "raw"
+		}
+	},
+	"providesContext": {
+		"aa/if/of": "of",
+		"aa/if/injection": "injection"
+	},
+	"usesContext": ["aa/foreach/of", "pattern/overrides"],
+	"supports": {
+		"html": true
+	},
+	"textdomain": "aa",
+	"editorScript": [
+		"aa/api/editor",
+		"file:../../lib/editor/block/ArrowAtomBlock.js",
+		"file:./index.js"
+	]
+}

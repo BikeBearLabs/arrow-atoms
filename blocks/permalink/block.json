@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "aa/permalink",
+	"title": "Arrow Atoms: Permalink",
+	"category": "common",
+	"description": "Button for the permalink of the current post.",
+	"attributes": {
+		"target": {
+			"type": "string",
+			"default": "_self"
+		},
+		"content": {
+			"type": "string",
+			"source": "html"
+		}
+	},
+	"usesContext": ["pattern/overrides"],
+	"supports": {
+		"html": true
+	},
+	"textdomain": "aa",
+	"editorScript": [
+		"aa/api/editor",
+		"file:../../lib/editor/block/ArrowAtomBlock.js",
+		"file:./index.js"
+	]
+}
