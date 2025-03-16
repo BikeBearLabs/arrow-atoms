@@ -3,6 +3,7 @@
 /**
  * Plugin Name:       <code>-></code> Arrow Atoms
  * Description:       Experimental, functional-expression-based blocks to fetch dynamic content without breaking into PHP.
+ * Requires Plugins:  advanced-custom-fields-pro
  * Requires at least: 6.6
  * Requires PHP:      8.0
  * Version:           0.0.0
