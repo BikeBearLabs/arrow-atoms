@@ -30,6 +30,10 @@ jobs:
         run: |
           sed -i -E "s/(\* Version:[[:space:]]*)0\.0\.0/\1${{ env.version }}/I" index.php
 
+      - name: Create a ZIP archive of the repository
+        run: |
+          zip -r "${{ env.repo }}.zip" . -x "*.git*"
+
       - name: Get previous tag
         id: prev_tag
         run: |
@@ -43,10 +47,6 @@ jobs:
           else
             git log --pretty=format:"- %s" > release_notes.txt
           fi
-
-      - name: Create a ZIP archive of the repository
-        run: |
-          zip -r "${{ env.repo }}.zip" . -x "*.git*"
 
       - name: Create Git tag
         run: |
