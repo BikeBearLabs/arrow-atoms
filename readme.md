@@ -9,7 +9,7 @@ An experimental WordPress plugin of server-side blocks, controlled using a funct
 
 ## Installation
 
-Download [latest release](https://github.com/BikeBearLabs/arrow-atoms/releases/latest) of the plugin & install it in your WordPress site.
+Download the [latest release](https://github.com/BikeBearLabs/arrow-atoms/releases/latest) of the plugin & install it on your WordPress site.
 
 > [!NOTE]
 > This plugin currently depends on **Advanced Custom Fields Pro (ACF Pro)**.
