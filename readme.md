@@ -3,13 +3,13 @@
 An experimental WordPress plugin of server-side blocks, controlled using a functional language.
 
 > [!WARNING]
-> This plugin is in early development and is **not yet ready for production use**.
+> This plugin is in early development & is **not yet ready for production use**.
 >
 > ..._However_, there are large sites with real users currently using it. Do ensure you implement proper caching mechanisms & disaster fallback as warned in the [Current Limitations](#current-limitations) section.
 
 ## Installation
 
-Download [latest release](https://github.com/BikeBearLabs/arrow-atoms/releases/latest) of the plugin and install it in your WordPress site.
+Download [latest release](https://github.com/BikeBearLabs/arrow-atoms/releases/latest) of the plugin & install it in your WordPress site.
 
 > [!NOTE]
 > This plugin currently depends on **Advanced Custom Fields Pro (ACF Pro)**.
@@ -20,7 +20,7 @@ Download [latest release](https://github.com/BikeBearLabs/arrow-atoms/releases/l
 
 ## Overview
 
-Arrow Atoms is a plugin mainly for experienced WordPress block developers, looking for a solution for interacting with server-side logic without leaving the blocks paradigm. This includes things like if-else statements, loops, and other control structures, that depend on logic such as post content or ACF fields.
+Arrow Atoms is a plugin mainly for experienced WordPress block developers, looking for a solution for interacting with server-side logic without leaving the blocks paradigm. This includes things like if-else statements, loops, & other control structures, that depend on logic such as post content or ACF fields.
 
 > [!WARNING] > **This plugin is not for everyone**. It is NOT a replacement for PHP. It is a tool for experienced developers to use in specific situations, & does not cover all of the use cases of proper server-side scripting.
 >
